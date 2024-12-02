@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "chi"
+version = "0.0.1"
+description = "Chi - mini self-cal pipeline"
+repository = "https://github.com/africalim/chi"
+documentation = ""
+authors = ["Frank, Savannah and Cyndie"]
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Astronomy"
+]
+include = [
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9, <3.12"
+astro-tigger-lsm = ">=1.7.2, <=1.7.3"
+codex-africanus = {extras = ["dask", "scipy", "astropy", "python-casacore"], version = ">=0.3.6, <=0.3.6"}
+dask = {extras = ["diagnostics"], version = ">=2023.5.0, <=2024.4.2"}
+dask-ms = {extras = ["s3", "xarray", "zarr"], version = ">=0.2.20, <=0.2.20"}
+pytest = ">=7.3.1, <=7.4.4"
+stimela = "^2.0rc17"  # Volatile - be less strict.
+
+
+[tool.poetry.scripts]
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
