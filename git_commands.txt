@@ -1,0 +1,11 @@
+git add .
+git commit -m "message"
+git log
+git push origin
+git fetch and git merge
+
+
+#change branch
+git branch name_of_branch
+#switch to this branch
+git checkout name_of_branch
